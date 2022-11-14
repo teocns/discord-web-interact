@@ -25,8 +25,8 @@ BOT_COMMAND_PREFIX = '!'
 
 
 # Voice channel created upon interaction schedule
-VOICE_CHANNEL_REQUIRED_ROLE = 'Interact-Winner'
-VOICE_CHANNEL_NAME = 'Interact-Winner'
+INTERACT_CHANNEL_NAME = 'Interact-Winner'
+INTERACT_CHANNEL_REQUIRED_ROLE = 'Interact-Winner'
 
 
 
