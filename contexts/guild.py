@@ -1,6 +1,6 @@
 import discord
 import logging
-
+from . import IBotContext
 
 from guild.manager import GuildManager
 
@@ -10,31 +10,23 @@ log = logging.getLogger(__name__)
 
 
     
-class GuildContext:
-    __manager = GuildManager()
+class GuildContext(IBotContext):
+    """
+    Context for a Guild
+    """
 
-    @property
-    def guilds_manager(self):
-        return self.__manager
+    guild: discord.Guild
 
     def __init__(
         self,
-        GUILD: discord.Guild,
+        guild: discord.Guild,
     ) -> None:
-       pass
+        self.guild = guild
 
 
     async def on_ready(self):
-        # Iterate GUILDS
-        for guild in self.client.guilds:
-            print(guild.name)
-            self.manager.register(guild)
-
+        pass
 
 
     async def on_message(self, message):
-        super().on_message(message)
-
-        if message.author != self.client.user:
-            self.manager.handle_message(message)
-            
+        pass    

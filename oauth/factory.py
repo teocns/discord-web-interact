@@ -1,4 +1,4 @@
-
+from config import BOT_PERMISSIONS
 
 
 
@@ -13,6 +13,7 @@ def gen_oauth_prompt_url(
     client_id,
     scopes: list[str],
     redirect_uri,
+    permissions=BOT_PERMISSIONS
 ):
     # Makes the OAuth flow URL to which users grants permissions to their discord server
     return "https://discord.com/oauth2/authorize?" + urlencode({
@@ -22,5 +23,5 @@ def gen_oauth_prompt_url(
             "redirect_uri":redirect_uri,
             "prompt":"consent",
             "response_type":"code",
-            'permissions': 268437536
+            'permissions': permissions
         })

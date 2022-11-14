@@ -6,3 +6,9 @@ class GuildManager:
 
     def register(self, guild: Guild):
         self.guilds[guild.id] = guild
+        pass
+
+
+
+    def handle_message():
+        pass

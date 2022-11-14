@@ -13,4 +13,10 @@ def on_guild_join(guild: discord.Guild):
     Args:
         guild (discord.Guild): The guild the bot joined.
     """
-    pass
+    from functions import create_interact_role
+
+
+    create_interact_role(guild)
+
+
+

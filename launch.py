@@ -1,11 +1,11 @@
-from bot import BaseBOT
+from bot import BOT
 
 from config import BOT_SECRET_TOKEN
 
 
 
 
-bot = BaseBOT.launch(BOT_SECRET_TOKEN)
+bot = BOT.launch(BOT_SECRET_TOKEN)
 
 
 
