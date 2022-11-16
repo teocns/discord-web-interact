@@ -25,7 +25,7 @@ class GuildContext(IBotContext):
 
 
     async def on_ready(self):
-        pass
+        log.info('Listening to GUILD %s' % (self.guild.name))
 
 
     async def on_message(self, message):

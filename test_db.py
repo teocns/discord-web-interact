@@ -1,5 +1,0 @@
-from config import INTERACT_CHANNEL_NAME
-
-
-
-print(INTERACT_CHANNEL_NAME)

@@ -1,10 +1,19 @@
-DEBUG = True
+
+def env(key, default=None):
+    """
+    Get an environment variable or default to a value
+    """
+    import os
+    return os.environ.get(key, default)
+
+
+
+DEBUG = env('DEBUG', False)
 
 API_ENDPOINT = 'https://discord.com/api/v10'
 CLIENT_ID = '893912286178201640'
 CLIENT_SECRET = 'AJZ64HbhYyftSUIVHtMGoW4DiwP241dP'
 REDIRECT_URI = 'https://localhost:8080/authorize-discord'
-#BOT_SECRET_TOKEN = 'ODkzOTEyMjg2MTc4MjAxNjQw.GeOC65.qW1jWMro1P88y5nmG_a62FLK0Odaj7DmiFFqA8'
 
 
 # Manage: SERVER, ROLES, CHANNELS
@@ -19,8 +28,6 @@ BOT_AUTHENTICATION_SCOPES = [
 'guilds',
     'applications.commands'
 ]
-# The prefix for bot commands
-BOT_COMMAND_PREFIX = '!'
 
 
 
@@ -38,7 +45,9 @@ FIREBASE_CERTIFICATE = {
 }
 
 
-if DEBUG:
-    # Set logging to debug
-    import logging
-    logging.basicConfig(level=logging.DEBUG)
+
+
+from utils.logging import setup
+
+
+setup(DEBUG)

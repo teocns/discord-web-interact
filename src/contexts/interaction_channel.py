@@ -14,6 +14,7 @@ class InteractionChannelContext(GuildContext):
     
 
     async def on_ready(self):
+        await super().on_ready()
         await self.bootstrap()
 
 
